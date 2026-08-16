@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 560" font-family="system-ui,-apple-system,'Segoe UI','PingFang SC','Microsoft YaHei',sans-serif">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#6366f1"/>
+    </marker>
+    <marker id="arrow2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#16a34a"/>
+    </marker>
+  </defs>
+
+  <!-- 画布 -->
+  <rect width="680" height="560" rx="16" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1.5"/>
+
+  <text x="340" y="38" text-anchor="middle" font-size="20" font-weight="700" fill="#0f172a">抖战台 · 多智能体协同作战架构</text>
+  <text x="340" y="60" text-anchor="middle" font-size="12" fill="#64748b">外滩大会·黑客松2026 | Qoder + 阿里云百炼 双赛道</text>
+
+  <!-- 用户目标 -->
+  <ellipse cx="340" cy="100" rx="150" ry="26" fill="#1e293b"/>
+  <text x="340" y="105" text-anchor="middle" font-size="14" font-weight="600" fill="#ffffff">🎯 用户只说一个作战目标</text>
+
+  <line x1="340" y1="126" x2="340" y2="150" stroke="#6366f1" stroke-width="2.5" marker-end="url(#arrow)"/>
+
+  <!-- 总指挥 -->
+  <rect x="220" y="152" width="240" height="70" rx="12" fill="#6366f1"/>
+  <text x="340" y="180" text-anchor="middle" font-size="16" font-weight="700" fill="#ffffff">⚔️ 总指挥 Orchestrator</text>
+  <text x="340" y="203" text-anchor="middle" font-size="12" fill="#e0e7ff">目标拆解 · 长时委派 · 上下文逐环传递 · 汇总</text>
+
+  <!-- 总指挥到 4 Agent 的分叉 -->
+  <line x1="340" y1="222" x2="340" y2="238" stroke="#6366f1" stroke-width="2.5"/>
+  <line x1="95" y1="238" x2="585" y2="238" stroke="#6366f1" stroke-width="2.5"/>
+  <line x1="95" y1="238" x2="95" y2="256" stroke="#6366f1" stroke-width="2.5" marker-end="url(#arrow)"/>
+  <line x1="258" y1="238" x2="258" y2="256" stroke="#6366f1" stroke-width="2.5" marker-end="url(#arrow)"/>
+  <line x1="422" y1="238" x2="422" y2="256" stroke="#6366f1" stroke-width="2.5" marker-end="url(#arrow)"/>
+  <line x1="585" y1="238" x2="585" y2="256" stroke="#6366f1" stroke-width="2.5" marker-end="url(#arrow)"/>
+
+  <!-- 4 个 Agent -->
+  <rect x="30" y="258" width="130" height="66" rx="10" fill="#eef2ff" stroke="#4338ca" stroke-width="1.5"/>
+  <text x="95" y="284" text-anchor="middle" font-size="14" font-weight="700" fill="#3730a3">🔍 选品拆解</text>
+  <text x="95" y="306" text-anchor="middle" font-size="11" fill="#4f46e5">痛点/人群/卖点/钩子</text>
+
+  <rect x="193" y="258" width="130" height="66" rx="10" fill="#eef2ff" stroke="#4338ca" stroke-width="1.5"/>
+  <text x="258" y="284" text-anchor="middle" font-size="14" font-weight="700" fill="#3730a3">🎬 直播场景</text>
+  <text x="258" y="306" text-anchor="middle" font-size="11" fill="#4f46e5">9:16 方案/机位/话术</text>
+
+  <rect x="357" y="258" width="130" height="66" rx="10" fill="#eef2ff" stroke="#4338ca" stroke-width="1.5"/>
+  <text x="422" y="284" text-anchor="middle" font-size="14" font-weight="700" fill="#3730a3">🎞️ 千川素材</text>
+  <text x="422" y="306" text-anchor="middle" font-size="11" fill="#4f46e5">3 条脚本 钩子→促单</text>
+
+  <rect x="520" y="258" width="130" height="66" rx="10" fill="#eef2ff" stroke="#4338ca" stroke-width="1.5"/>
+  <text x="585" y="284" text-anchor="middle" font-size="14" font-weight="700" fill="#3730a3">📊 财务核算</text>
+  <text x="585" y="306" text-anchor="middle" font-size="11" fill="#4f46e5">毛利/净利/ROI/预警</text>
+
+  <!-- Agent 串联箭头（继承） -->
+  <line x1="160" y1="291" x2="191" y2="291" stroke="#16a34a" stroke-width="2.5" marker-end="url(#arrow2)"/>
+  <line x1="323" y1="291" x2="355" y2="291" stroke="#16a34a" stroke-width="2.5" marker-end="url(#arrow2)"/>
+  <line x1="487" y1="291" x2="519" y2="291" stroke="#16a34a" stroke-width="2.5" marker-end="url(#arrow2)"/>
+  <text x="340" y="342" text-anchor="middle" font-size="11" fill="#16a34a" font-weight="600">▲ 后一个 Agent 继承前一个的输出（串联协同，不是孤立回答）</text>
+
+  <!-- 汇聚到工具层 -->
+  <line x1="95" y1="324" x2="95" y2="360" stroke="#64748b" stroke-width="2"/>
+  <line x1="258" y1="324" x2="258" y2="360" stroke="#64748b" stroke-width="2"/>
+  <line x1="422" y1="324" x2="422" y2="360" stroke="#64748b" stroke-width="2"/>
+  <line x1="585" y1="324" x2="585" y2="360" stroke="#64748b" stroke-width="2"/>
+  <line x1="95" y1="360" x2="585" y2="360" stroke="#64748b" stroke-width="2"/>
+  <line x1="340" y1="360" x2="340" y2="378" stroke="#64748b" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- 工具层 -->
+  <rect x="110" y="380" width="460" height="66" rx="10" fill="#f0fdf4" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="340" y="404" text-anchor="middle" font-size="14" font-weight="700" fill="#166534">🛠️ 工具调用层 tool-use（5 个真实工具）</text>
+  <text x="340" y="428" text-anchor="middle" font-size="11.5" fill="#15803d">calculator · feishu_fetch · trend_fetch(真实HTTP热榜) · extract_table · feishu_real</text>
+
+  <!-- 分叉到知识库和百炼 -->
+  <line x1="200" y1="446" x2="200" y2="470" stroke="#64748b" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="480" y1="446" x2="480" y2="470" stroke="#64748b" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- 全局知识库 -->
+  <rect x="60" y="472" width="280" height="66" rx="10" fill="#fefce8" stroke="#ca8a04" stroke-width="1.5"/>
+  <text x="200" y="496" text-anchor="middle" font-size="14" font-weight="700" fill="#854d0e">💡 全局知识库（记忆升级）</text>
+  <text x="200" y="520" text-anchor="middle" font-size="11.5" fill="#a16207">每次作战自动提炼洞察 · 跨 Agent 跨会话复用</text>
+
+  <!-- 百炼模型层 -->
+  <rect x="360" y="472" width="280" height="66" rx="10" fill="#fdf4ff" stroke="#c026d3" stroke-width="1.5"/>
+  <text x="500" y="496" text-anchor="middle" font-size="14" font-weight="700" fill="#86198f">🧠 阿里云百炼 DashScope</text>
+  <text x="500" y="520" text-anchor="middle" font-size="11.5" fill="#a21caf">qwen-plus / turbo / max · OpenAI 兼容协议</text>
+</svg>
