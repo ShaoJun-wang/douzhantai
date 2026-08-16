@@ -8,6 +8,12 @@
 **一句话**：说一个作战目标，总指挥自动把它拆给 4 个专职 AI Agent 串联协同干完，产出完整作战方案。
 **零依赖**：内置真实样例，评审无需配置任何环境或密钥，打开即可走通全流程。
 
+## 🏗️ 架构总览
+
+![多智能体协同作战架构](docs/architecture.svg)
+
+> 一个作战目标 → 总指挥拆解并长时委派 → 4 个专职 Agent 串联协同（上下文逐环传递）→ 工具层 5 个真实工具调用 → 全局知识库跨会话沉淀 · 百炼 DashScope 模型层。
+
 ## 一、作品简介
 「抖战台」是一个面向抖音电商从业者的**多智能体协同作战台**。它把选品、直播、投流素材、财务核算四个高频环节，封装成 4 个专职 AI Agent，并配一个**总指挥（Orchestrator）**：你只说一个作战目标，总指挥自动把它拆解、委派给 4 个 Agent **串联协同**完成，最后汇总成一份完整作战方案。
 
@@ -30,6 +36,16 @@
 选品拆解 → 直播场景 → 千川素材 → 财务核算
 ```
 **后一个 Agent 必须继承前一个的输出继续**（选品的钩子 → 直播的场景 → 千川的脚本 → 财务的核算对齐），形成一条连贯的作战方案，而不是 4 个孤立回答。最终在「总攻作战方案」卡片里看到 4 步结果 + 总攻建议。
+
+## 📸 实际运行截图（演示模式 · 零 Key 即跑）
+
+| 总指挥作战入口 | 选品拆解 Agent 产出 |
+|:---:|:---:|
+| ![总指挥作战入口](docs/screenshots/showcase_01_orchestrator.png) | ![选品拆解Agent产出](docs/screenshots/showcase_02_selection_agent.png) |
+| **🎬 直播场景 Agent 产出** | **🎞️ 千川素材 Agent 产出** |
+| ![直播场景Agent产出](docs/screenshots/showcase_04_live_scene.png) | ![千川素材Agent产出](docs/screenshots/showcase_05_qianchuan_script.png) |
+| **📊 财务核算计算器** | |
+| ![财务核算计算器](docs/screenshots/showcase_03_finance_calc.png) | |
 
 ## 四、真·Agent 内核（对应 Qoder 技术难度）
 - **多智能体协同**：4 个专职 Agent 由总指挥编排串联，上下文逐环传递。
